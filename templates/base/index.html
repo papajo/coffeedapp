@@ -47,12 +47,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">C O F F E E D</a>
+                <a class="navbar-brand page-scroll" href="/">C O F F E E D</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
+                  {% block navigation %}
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
@@ -65,13 +66,14 @@
                     <li>
                         <a class="page-scroll" href="#contact">Get Invited</a>
                     </li>
+                    {% endblock %}
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
     </nav>
-
+    {% block main_content %}
     <!-- Header -->
     <header>
         <div class="container">
@@ -115,66 +117,66 @@
 
     <!-- Team Section -->
     <!-- Team Section -->
- <section id="team" class="bg-light-gray">
- <div class="container">
- <div class="row">
- <div class="col-lg-12 text-center">
- <h2 class="section-heading">Our Caffeinated Team</h2>
- <h3 class="section-subheading text-muted">Working hard to find you the best of the best.</h3>
- </div>
- </div>
- <div class="row">
- <div class="col-sm-4">
- <div class="team-member">
- <img src="{% static "img/team/1.jpg" %}" class="img-responsive img-circle" alt="">
- <h4>Kristina Zmaic</h4>
- <p class="text-muted">Founder & Designer</p>
- <ul class="list-inline social-buttons">
- <li><a href="https://twitter.com/kzmaic"><i class="fa fa-twitter"></i></a>
- </li>
- <li><a href="https://instagram.com/kzmaic/"><i class="fa fa-instagram"></i></a>
- </li>
- </ul>
- </div>
- </div>
- <div class="col-sm-4">
- <div class="team-member">
- <img src="{% static "img/team/2.jpg" %}" class="img-responsive img-circle" alt="">
- <h4>Eric Neuman</h4>
- <p class="text-muted">Web & Business Development</p>
- <ul class="list-inline social-buttons">
- <li><a href="https://twitter.com/eric_neuman"><i class="fa fa-twitter"></i></a>
- </li>
- <li><a href="https://instagram.com/eric_neuman"><i class="fa fa-instagram"></i></a>
- </li>
- <li><a href="https://www.linkedin.com/in/ericneuman"><i class="fa fa-linkedin"></i></a>
- </li>
- </ul>
- </div>
- </div>
- <div class="col-sm-4">
- <div class="team-member">
- <img src="{% static "img/team/3.jpg" %}" class="img-responsive img-circle" alt="">
- <h4>Chris Castiglione</h4>
- <p class="text-muted">Project Management</p>
- <ul class="list-inline social-buttons">
- <li><a href="https://twitter.com/castig"><i class="fa fa-twitter"></i></a>
- </li>
- <li><a href="https://instagram.com/castig"><i class="fa fa-instagram"></i></a>
- </li>
- <li><a href="http://www.linkedin.com/in/castig"><i class="fa fa-linkedin"></i></a>
- </li>
- </ul>
- </div>
- </div>
- </div>
- <div class="row">
- <div class="col-lg-8 col-lg-offset-2 text-center">
- <p class="large text-muted">We're three geeks who love coffee, working, and building things — and wanted to map out all the best coffee locations where we would work with ease in our neighborhood.</p>
- </div>
- </div>
- </div>
- </section>
+    <section id="team" class="bg-light-gray">
+     <div class="container">
+       <div class="row">
+         <div class="col-lg-12 text-center">
+           <h2 class="section-heading">Our Caffeinated Team</h2>
+           <h3 class="section-subheading text-muted">Working hard to find you the best of the best.</h3>
+         </div>
+       </div>
+       <div class="row">
+         <div class="col-sm-4">
+           <div class="team-member">
+             <img src="{% static "img/team/1.jpg" %}" class="img-responsive img-circle" alt="">
+             <h4>Kristina Zmaic</h4>
+             <p class="text-muted">Founder & Designer</p>
+             <ul class="list-inline social-buttons">
+               <li><a href="https://twitter.com/kzmaic"><i class="fa fa-twitter"></i></a>
+               </li>
+               <li><a href="https://instagram.com/kzmaic/"><i class="fa fa-instagram"></i></a>
+               </li>
+             </ul>
+           </div>
+         </div>
+         <div class="col-sm-4">
+           <div class="team-member">
+             <img src="{% static "img/team/2.jpg" %}" class="img-responsive img-circle" alt="">
+             <h4>Eric Neuman</h4>
+             <p class="text-muted">Web & Business Development</p>
+             <ul class="list-inline social-buttons">
+               <li><a href="https://twitter.com/eric_neuman"><i class="fa fa-twitter"></i></a>
+               </li>
+               <li><a href="https://instagram.com/eric_neuman"><i class="fa fa-instagram"></i></a>
+               </li>
+               <li><a href="https://www.linkedin.com/in/ericneuman"><i class="fa fa-linkedin"></i></a>
+               </li>
+             </ul>
+           </div>
+         </div>
+         <div class="col-sm-4">
+           <div class="team-member">
+             <img src="{% static "img/team/3.jpg" %}" class="img-responsive img-circle" alt="">
+             <h4>Chris Castiglione</h4>
+             <p class="text-muted">Project Management</p>
+             <ul class="list-inline social-buttons">
+               <li><a href="https://twitter.com/castig"><i class="fa fa-twitter"></i></a>
+               </li>
+               <li><a href="https://instagram.com/castig"><i class="fa fa-instagram"></i></a>
+               </li>
+               <li><a href="http://www.linkedin.com/in/castig"><i class="fa fa-linkedin"></i></a>
+               </li>
+             </ul>
+           </div>
+         </div>
+       </div>
+       <div class="row">
+         <div class="col-lg-8 col-lg-offset-2 text-center">
+           <p class="large text-muted">We're three geeks who love coffee, working, and building things — and wanted to map out all the best coffee locations where we would work with ease in our neighborhood.</p>
+         </div>
+       </div>
+     </div>
+   </section>
 
  <section id="contact">
    <div class="container">
@@ -199,39 +201,40 @@
    </div>
 </section>
 
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; Your Website 2014</span>
-                </div>
-                <div class="col-md-4">
-                    <ul class="list-inline social-buttons">
-                        <li><a href="https://twitter.com/getcoffeed"><i class="fa fa-twitter"></i></a>
-                        </li>
-                        <li><a href="https://www.facebook.com/getcoffeed"><i class="fa fa-facebook"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <ul class="list-inline quicklinks">
-                        <li><a href="#">Privacy Policy</a>
-                        </li>
-                        <li><a href="#">Terms of Use</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
+    {% endblock %}
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <span class="copyright">Copyright &copy; Your Website 2014</span>
+      </div>
+      <div class="col-md-4">
+        <ul class="list-inline social-buttons">
+          <li><a href="https://twitter.com/getcoffeed"><i class="fa fa-twitter"></i></a>
+          </li>
+          <li><a href="https://www.facebook.com/getcoffeed"><i class="fa fa-facebook"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <ul class="list-inline quicklinks">
+          <li><a href="#">Get In Touch</a>
+          </li>
+          <li><a href="#">Privacy Policy</a>
+          </li>
+          <li><a href="#">Terms of Use</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
 
-    
+<!-- jQuery -->
+<script src="{% static "js/jquery.js" %}"></script>
 
-    <!-- jQuery -->
-    <script src="{% static "js/jquery.js" %}"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="{% static "js/bootstrap.min.js" %}"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="{% static "js/bootstrap.min.js" %}"></script>
 
 </body>
 
